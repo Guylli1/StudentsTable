@@ -1,0 +1,103 @@
+# O que precisa ser feito na tabela pelo javascript?
+-Arquivo json separado com os alunos.
+-interar array com loop
+
+# Palavras chave.
+-import file
+-map
+-inner HTML
+-type module in HTML
+-mock data
+
+        <!--
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Student</th>
+            <th>Class</th>
+            <th>Note</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Fulano de Tal</td>
+            <td>5003</td>
+            <td>9.5</td>
+            <td>:)</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th>2</th>
+            <td>Fulano de Tal</td>
+            <td>5003</td>
+            <td>4.5</td>
+            <td>:)</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th>3</th>
+            <td>Fulano de Tal</td>
+            <td>5003</td>
+            <td>8.0</td>
+            <td>:)</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th>4</th>
+            <td>Fulano de Tal</td>
+            <td>5003</td>
+            <td>7.5</td>
+            <td>:)</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th>5</th>
+            <td>Fulano de Tal</td>
+            <td>5003</td>
+            <td>5.0</td>
+            <td>:)</td>
+          </tr>
+        </tbody>
+        -->
+
+
+
+
+
+
+/*
+fetch('./data.json')
+.then(r => r.json())
+
+.then(json => {
+  for (let j = 0; j < json.length; j++) {
+    console.log(json[j])
+  }
+})
+
+
+
+  */
+
+
+
+
+
+tbody {
+  counter-reset: row;
+  /* Set the row counter to 0 */
+}
+
+tbody tr::before {
+  counter-increment: row;
+  /* Increment the row counter*/
+  content: counter(row);
+  /* Display the row */
+  border: 1px solid #e8eceb;
+}

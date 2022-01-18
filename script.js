@@ -1,49 +1,45 @@
 import data from './data.json' assert { type: 'json' }
 
-function createTag(element) {
+document.querySelector('h1').textContent = 'Rock School'
+
+const table = document.getElementById('table')
+const students = data
+const thead = createHtmlElement('thead'),
+  tbody = createHtmlElement('tbody'),
+  rowHead = createHtmlElement('tr')
+
+function createHtmlElement(element) {
   return document.createElement(element)
 }
 
-let title = document.querySelector('h1')
-title.textContent = 'Rock School'
+// make header
+for (const key of Object.keys(data[0])) {
+  const columnHead = createHtmlElement('th')
+  columnHead.textContent = key
 
-let table = document.getElementById('table')
-
-let thead = createTag('thead')
-let tbody = createTag('tbody')
-let headLine = createTag('tr')
-
-const student = data
-const rows = []
-
-student.students.forEach(function (stud) {
-  for (let prop in stud) {
-    if (rows.indexOf(prop) == -1) {
-      rows.push(prop)
-    }
-  }
-})
-
-if (student.students.length > 0) {
-  let heading = createTag('tr')
-  rows.forEach(function (prop, indice) {
-    let colun = createTag('th')
-    colun.textContent = prop
-    heading.appendChild(colun)
-  })
-  thead.appendChild(heading)
-
-  student.students.forEach(function (stud) {
-    let line = createTag('tr')
-    rows.forEach(function (prop) {
-      let colun = createTag('td')
-      colun.textContent = stud[prop]
-      line.appendChild(colun)
-    })
-    tbody.appendChild(line)
-  })
+  rowHead.appendChild(columnHead)
 }
 
-thead.appendChild(headLine)
+// make body
+for (const student of students) {
+  const rowBody = createHtmlElement('tr')
+
+  student.Result = student.Note > 7 ? ':)' : ':('
+
+  for (const value of Object.values(student)) {
+    const columnBody = createHtmlElement('td')
+    columnBody.textContent = value
+
+    rowBody.appendChild(columnBody)
+  }
+
+  tbody.appendChild(rowBody)
+}
+
+thead.appendChild(rowHead)
 table.appendChild(thead)
 table.appendChild(tbody)
+let tds = document.querySelectorAll('td')
+tds.forEach(td => {
+  td.style.backgroundColor = td.innerText == ':(' ? 'red' : null
+})

@@ -1,38 +1,38 @@
-{"students": [
+ [
 
   {
-    "#": 1,
+    "N°": 1,
     "Student": "Gustaf",
     "Class": 5003,
     "Note": 9.5,
     "Result": ""
   },
   {
-    "#": 2,
+    "N°": 2,
     "Student": "Johny",
     "Class": 5003,
     "Note": 5.5,
     "Result": ""
   },
   {
-    "#": 3,
+    "N°": 3,
     "Student": "Maria",
     "Class": 5003,
     "Note": 4.5,
     "Result": ""
   },
   {
-    "#": 4,
+    "N°": 4,
     "Student": "Michael",
     "Class": 5003,
     "Note": 10.0,
     "Result": ""
   },
   {
-    "#": 5,
+    "N°": 5,
     "Student": "Zoe",
     "Class": 5003,
     "Note": 8.0,
     "Result": ""
   }
-]}
+]

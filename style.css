@@ -28,10 +28,10 @@ body {
 
 table {
   width: 100%;
-  margin-bottom: 0.5em;
   table-layout: fixed;
-  text-align: center;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  margin-top: -8px;
 }
 
 #table thead,
@@ -45,25 +45,28 @@ tbody {
   font-weight: 600;
   letter-spacing: 0.35px;
   color: #fafffe;
+  background-color: #353a40;
   opacity: 1;
-  padding: 25px 35px;
+  padding: 12px;
   vertical-align: top;
-  padding-right: 150px;
-  border-bottom: 3px solid #292c2e;
+  padding: 20px;
 }
 
 #table tbody tr td {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: normal;
   letter-spacing: 0.35px;
   color: #fafffe;
+  background-color: #353a40;
+  vertical-align: middle;
   opacity: 1;
-  padding: 25px 35px;
-  padding-right: 150px;
-  border-bottom: 2px solid #292c2e;
-  font-weight: calc(40);
+  text-align: center;
+  padding: 20px;
 }
 
-#table thead tbody {
-  text-align: center;
+#table tr {
+  opacity: 0.6;
+}
+#table tr:hover {
+  opacity: 3;
 }

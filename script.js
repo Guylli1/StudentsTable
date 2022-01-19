@@ -29,6 +29,7 @@ for (const student of students) {
   for (const value of Object.values(student)) {
     const columnBody = createHtmlElement('td')
     columnBody.textContent = value
+    student.Note < 7 ? (columnBody.style.backgroundColor = '#b33939') : null
 
     rowBody.appendChild(columnBody)
   }
@@ -39,7 +40,5 @@ for (const student of students) {
 thead.appendChild(rowHead)
 table.appendChild(thead)
 table.appendChild(tbody)
-let tds = document.querySelectorAll('td')
-tds.forEach(td => {
-  td.style.backgroundColor = td.innerText == ':(' ? 'red' : null
-})
+
+//const line = (columnBody.style.backgroundColor = 'red')

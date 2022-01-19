@@ -28,9 +28,7 @@ body {
 
 table {
   width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0 3px;
+  border-spacing: 0;
   margin-top: -8px;
 }
 
@@ -50,6 +48,10 @@ tbody {
   padding: 12px;
   vertical-align: top;
   padding: 20px;
+  border: 2px solid #292c2e;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 #table tbody tr td {
@@ -62,6 +64,11 @@ tbody {
   opacity: 1;
   text-align: center;
   padding: 20px;
+
+  border: 2px solid #292c2e;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 #table tr {
